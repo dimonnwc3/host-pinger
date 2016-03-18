@@ -1,10 +1,7 @@
 'use strict';
 
-const chalk = require('chalk');
-const logUpdate = require('log-update');
-
-
 const HostPinger = require('./lib/HostPinger');
+const render = require('./lib/render');
 
 let hostPinger = new HostPinger({
   hosts: [
@@ -26,36 +23,4 @@ hostPinger.start((err, servers) => {
   render(servers);
 });
 
-function makeTemplate(servers) {
-
-  let output = [];
-
-  servers.forEach(server => {
-
-    let str;
-
-    if (server.ping < 50) {
-      str = `* ${server.alias || server.hostName}: ${chalk.green(server.ping)}`;
-    }
-
-    if (server.ping >= 50 && server.ping <= 100) {
-      str = `* ${server.alias || server.hostName}: ${chalk.yellow(server.ping)}`;
-    }
-
-    if (server.ping > 100) {
-      str = `* ${server.alias || server.hostName}: ${chalk.red(server.ping)}`;
-    }
-
-    output.push(str);
-
-  });
-
-  return output;
-
-}
-
-function render(servers) {
-  let template = makeTemplate(servers);
-  logUpdate(template.join('\n'));
-}
-
+module.exports = HostPinger;
