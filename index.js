@@ -20,6 +20,7 @@ let hostPinger = new HostPinger({
 });
 
 hostPinger.start((err, servers) => {
+  if (err) return console.log(err);
   render(servers);
 });
 
