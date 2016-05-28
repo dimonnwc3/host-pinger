@@ -15,13 +15,18 @@ let hostPinger = new HostPinger({
     'login.p8.worldoftanks.net',
     'login.p9.worldoftanks.net',
     {alias: 'RU10', host: 'login.p10.worldoftanks.net'},
+    '192.168.1.1',
+    '10.0.1.1',
     '123s'
   ]
 });
 
-hostPinger.start((err, servers) => {
-  if (err) return console.log(err);
+hostPinger.start(servers => {
   render(servers);
+});
+
+hostPinger.on('error', err => {
+  //console.log(err);
 });
 
 module.exports = HostPinger;
