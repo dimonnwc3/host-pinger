@@ -6,7 +6,7 @@
 
 ### Install
 
-```
+```javascript
 npm install --global host-pinger
 ```
 
@@ -31,13 +31,13 @@ $ host-pinger --help
 
 ### Install
 
-```
+```javascript
 npm install --save host-pinger
 ```
 
 ### Usage
 
-```
+```javascript
 const HostPinger = require('host-pinger');
 
 let hostPinger = new HostPinger({
@@ -59,9 +59,22 @@ hostPinger.on('error', err => {
 });
 ```
 
+### HostPinger
+
+#### new HostPinger([opts])
+Create a new HostPinger.
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [options] | <code>Object</code> |  |
+| [options.amount] | <code>Number</code> | Amount of pings. Infinitely (0) by default; |
+| [options.delay] | <code>Number</code> | Delay in ms. 1000 by Default; |
+| [options.hosts] | <code>Array</code> | Array of hosts strings or objects |
+
+
 ### Server response structure
 
-```
+```javascript
 { hostName: 'google.com',
  address: '92.223.8.109',
  ping: 10 }
