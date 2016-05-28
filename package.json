@@ -1,5 +1,5 @@
 {
-  "name": "hosts-pinger",
+  "name": "host-pinger",
   "version": "0.0.1",
   "description": "Simple pinging multiple hosts",
   "main": "index.js",
