@@ -15,7 +15,7 @@ let hostPinger = new HostPinger({
     'login.p8.worldoftanks.net',
     'login.p9.worldoftanks.net',
     {alias: 'RU10', host: 'login.p10.worldoftanks.net'},
-    '192.168.1.1'
+    '123s'
   ]
 });
 
