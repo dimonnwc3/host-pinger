@@ -1,6 +1,6 @@
 {
   "name": "host-pinger",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple pinging multiple hosts",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "https://github.com/dimonnwc3/host-pinger.git"
   },
   "bin": {
-    "host-pinger" : "./lib/cli.js"
+    "host-pinger": "./lib/cli.js"
   },
   "keywords": [
     "ping"
