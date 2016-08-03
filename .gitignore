@@ -2,6 +2,7 @@
 logs
 *.log
 npm-debug.log*
+TODO.md
 
 # Runtime data
 pids
