@@ -52,6 +52,9 @@ hostPinger.start(servers => {
   //...
 });
 
+//Stop receive pings
+hostPinger.stop();
+
 
 //Error handling
 hostPinger.on('error', err => {
