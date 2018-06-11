@@ -1,5 +1,3 @@
-'use strict';
-
-const HostPinger = require('./lib/HostPinger');
+const HostPinger = require("./lib/HostPinger");
 
 module.exports = HostPinger;
