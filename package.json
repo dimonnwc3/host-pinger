@@ -19,11 +19,11 @@
   "author": "Dmitrii Solovev",
   "license": "GPLv3",
   "dependencies": {
-    "chalk": "^2.4.1",
-    "delay": "^3.0.0",
+    "chalk": "^2.4.2",
+    "delay": "^4.1.0",
     "log-update": "^2.3.0",
     "meow": "^5.0.0",
     "net-ping": "^1.2.0",
-    "pify": "^3.0.0"
+    "pify": "^4.0.1"
   }
 }
